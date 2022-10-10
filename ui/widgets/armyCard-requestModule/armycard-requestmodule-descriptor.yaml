@@ -1,0 +1,6 @@
+code: sme-richiestacartaesercito-widget
+titles:
+    en: AGGATE - Richiesta Carta Esercito
+    it: AGGATE - Richiesta Carta Esercito
+group: free
+customUiPath: armycard-requestmodule.ftl
