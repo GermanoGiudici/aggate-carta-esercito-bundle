@@ -1,0 +1,7 @@
+code: aggate-ce-modulorichiesta-bundle
+description: Bundle per la gestione delle richieste Carta
+components:
+#    plugins:
+#        - plugins/entando-template-ms-plugin.yaml
+    widgets:
+        - ui/widgets/armyCard-requestModule/armycard-requestmodule-descriptor.yaml
