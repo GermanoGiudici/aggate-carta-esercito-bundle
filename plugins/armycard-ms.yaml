@@ -1,0 +1,60 @@
+descriptorVersion: v4
+image: germanogiudici/aggate-carta-esercito:1.0.0
+dbms: none
+ingressPath: "/aggate-carta-esercito"
+healthCheckPath: "/management/health"
+roles:
+    - "aggate-carta-esercito-admin"
+
+deploymentBaseName: aggate-carta-esercito
+environmentVariables:
+    - name: SPRING_DATASOURCE_URL
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.datasource.url
+    - name: SPRING_DATASOURCE_USERNAME
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.datasource.username
+    - name: SPRING_DATASOURCE_PASSWORD
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.datasource.password
+    - name: SPRING_DATASOURCE_DATABASE_PLATFORM
+      value: "org.hibernate.dialect.Oracle12cDialect"
+    - name: SPRING_DATASOURCE_DATABASE
+      value: "ORACLE"
+    - name: KEYCLOAK_ENABLED
+      value: 'true'
+    - name: KEYCLOAK_REALM
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: keycloak.realm
+    - name: KEYCLOAK_PUBLIC_CLIENT_ID
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: keycloak.public.client.id
+    - name: KEYCLOAK_AUTH_URL
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: keycloak.auth.url
+    - name: KEYCLOAK_CLIENT_SECRET
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: keycloak.client.secret
+    - name: KEYCLOAK_CLIENT_ID
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: keycloak.client.id
+    - name: SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.issuer.uri
+    - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.client.secret
+    - name: SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID
+      secretKeyRef:
+          name: aggate-carta-esercito-secret
+          key: spring.client.id
