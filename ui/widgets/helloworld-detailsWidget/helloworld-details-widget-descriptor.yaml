@@ -1,0 +1,6 @@
+code: helloworld-details-widget
+titles:
+  en: Helloworld Details Widget
+  it: Helloworld Details Widget
+group: free
+customUiPath: helloworld-details-widget.ftl
