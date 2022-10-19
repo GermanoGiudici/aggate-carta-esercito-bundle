@@ -1,0 +1,6 @@
+code: sme-cardcartaesercito-widget
+titles:
+    en: AGGATE - Card Carta Esercito
+    it: AGGATE - Card Carta Esercito
+group: free
+customUiPath: armycard-advertise.ftl

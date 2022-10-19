@@ -5,3 +5,4 @@ components:
         - plugins/armycard-ms.yaml
     widgets:
         - ui/widgets/armyCard-requestModule/armycard-requestmodule-descriptor.yaml
+        - ui/widgets/armyCard-advertise/armycard-advertise-descriptor.yaml
