@@ -1,5 +1,5 @@
 descriptorVersion: v4
-image: germanogiudici/aggate-carta-esercito:1.0.4
+image: germanogiudici/aggate-carta-esercito:1.0.5
 dbms: none
 ingressPath: "/aggate-carta-esercito"
 healthCheckPath: "/management/health"
